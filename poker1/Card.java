@@ -1,11 +1,10 @@
-package poker;
+package poker1;
 
 import java.util.Objects;
 
 public class Card {
-
     public String suit;//花色
-    public int rank;///牌面值
+    public int rank;///点数
 
     public Card(String suit, int rank) {
         this.suit = suit;
@@ -21,13 +20,13 @@ public class Card {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Card card = (Card) o;
+        poker.Card card = (poker.Card) o;
         return rank == card.rank &&
                 Objects.equals(suit, card.suit);
     }
 
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(suit, rank);
-//    }
+    //只比较点数相同
+    public boolean equalsRank(Card card) {
+        return rank == card.rank;
+    }
 }
