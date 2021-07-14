@@ -25,5 +25,11 @@ public class MyArrayTest {
 
         list.add(4,66);
         System.out.println(list);//[10000, 999, 88, 31, 66, 32, 33, 666]
+
+        Iterator it = list.iterator();
+        while (it.hasNext()) {
+            System.out.print(it.next()+" ");
+        }
+
     }
 }

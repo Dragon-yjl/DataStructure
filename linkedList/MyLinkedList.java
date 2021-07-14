@@ -1,7 +1,5 @@
 package linkedList;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 public class MyLinkedList implements List {
 
     public Node head; //指向第一个节点
@@ -251,8 +249,8 @@ public class MyLinkedList implements List {
     }
 
     @Override
-    public Iterator iterator() {
-        return null;
+    public LinkedListIterator iterator() {
+        return new LinkedListIterator(this);
     }
 
     @Override
